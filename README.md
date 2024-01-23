@@ -1,3 +1,3 @@
 # Streamlit-Zoila
 Proyecto Python
-Dina Cornejo, Luisa Gomez y Mariana Reyes
+Por: Dina Cornejo, Luisa Gomez y Mariana Reyes
