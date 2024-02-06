@@ -14,7 +14,7 @@ imagen_chicas = "superpoderosas.png"
 imagen_team_zoila = "Team Zoila.JPG"
 
 # Definimos la ruta de la carpeta donde se encuentran las imágenes de la base de datos de Zoila
-folder_zoila = "proyecto\\ID-Item"
+folder_zoila = "ID-Item/"
 
 texto = """
 Zoila Aurora Cáceres fue una destacada escritora, política y activista del feminismo en Perú. 
