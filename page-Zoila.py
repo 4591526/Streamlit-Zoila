@@ -76,7 +76,7 @@ def load_images_and_rgb(folder_path):
     rgb_data = []
 
     for filename in os.listdir(folder_path):
-        if filename.endswith(('.JPG', '.jpeg', '.PNG')):
+        if filename.endswith(('.JPG', '.jpeg', '.PNG', 'jpg')):
             file_path = os.path.join(folder_path, filename)
             img = Image.open(file_path)
 
