@@ -6,11 +6,10 @@ import os #Esta biblioteca proporciona una interfaz para interactuar con el sist
 from PIL import Image #Es una clase dentro de la biblioteca Pillow que proporciona funcionalidades para trabajar con imágenes
 
 # Con formato de Markdown centramos y agrandamos la letra del título de la web en streamlit
-st.markdown("<h1 style='text-align: center; color: purple;'>Álbum personal de Zoila Aurora Cáceres</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center;'>Álbum personal de Zoila Aurora Cáceres</h1>", unsafe_allow_html=True)
 
 # Nombramos al archivo de la imagen de Zoila y Team Zoila
 imagen_zoila = "ZOILA.png"
-imagen_chicas = "superpoderosas.png"
 imagen_team_zoila = "Team Zoila.JPG"
 
 # Definimos la ruta de la carpeta donde se encuentran las imágenes de la base de datos de Zoila
@@ -37,7 +36,7 @@ tipografia = "Arial, sans-serif"
 
 # Definimos el tamaño de la fuente, justificación y color
 estilo_personalizado = f"""
-    <div style="font-family: {tipografia}; font-size: 20px; text-align: justify; color: purple;">
+    <div style="font-family: {tipografia}; font-size: 20px; text-align: justify;">
         {texto}
 """
 
@@ -48,7 +47,7 @@ st.markdown(estilo_personalizado, unsafe_allow_html=True)
 st.image(imagen_zoila, caption="Zoila Cáceres", use_column_width=True)
 
 # Mostramos la imagen de las chicas superpoderosas
-st.image(imagen_chicas, caption="Grupo Chicas Superpoderosas - HLAB", use_column_width=True)
+# st.image(imagen_chicas, caption="Grupo Chicas Superpoderosas - HLAB", use_column_width=True)
 
 # Obtenemos el nombre del archivo subido
 file_name = "C:\\Users\\aml\\Desktop\\proyecto\\Dataset_ZAC.csv"
