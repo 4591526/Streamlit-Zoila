@@ -74,9 +74,15 @@ st.subheader("🔎 Buscador de imágenes")
 imagen = st.text_input("Ingrese el ID-Item que desea buscar:")
 if imagen:
     if imagen == 'ZAC-002-estampilla':
-        st.markdown("<a href='https://datos.pucp.edu.pe/file.xhtml?fileId=20676&version=1.0' target='_blank'>Haz clic aquí para visitar el blog</a>", unsafe_allow_html=True)
+        st.markdown("<a href='https://datos.pucp.edu.pe/file.xhtml?fileId=20676&version=1.0' target='_blank'>Haz clic aquí para ver la imagen</a>", unsafe_allow_html=True)
+    elif imagen == 'ZAC-002-tarjeta':
+        st.markdown("<a href='https://datos.pucp.edu.pe/file.xhtml?fileId=20676&version=1.0' target='_blank'>Haz clic aquí para ver la imagen</a>", unsafe_allow_html=True)
     elif imagen == 'ZAC-005/006-recorte1':
-        st.markdown("<a href='https://datos.pucp.edu.pe/file.xhtml?fileId=20624&version=1.0' target='_blank'>Haz clic aquí para visitar el blog</a>", unsafe_allow_html=True)
+        st.markdown("<a href='https://datos.pucp.edu.pe/file.xhtml?fileId=20624&version=1.0' target='_blank'>Haz clic aquí para ver la imagen</a>", unsafe_allow_html=True)
+    elif imagen == 'ZAC-003-foto':
+        st.markdown("<a href='https://datos.pucp.edu.pe/file.xhtml?fileId=20437&version=1.0' target='_blank'>Haz clic aquí para ver la imagen</a>", unsafe_allow_html=True)
+   elif imagen == 'ZAC-006-recorte2':
+        st.markdown("<a href='https://datos.pucp.edu.pe/file.xhtml?fileId=20701&version=1.0' target='_blank'>Haz clic aquí para ver la imagen</a>", unsafe_allow_html=True)     
     else:
         st.warning("No se encontraron resultados para la búsqueda.")
 
