@@ -70,52 +70,13 @@ if palabra_clave:
     else:
         st.write(f"No se encontraron resultados para la palabra: {palabra_clave}")
 
-def load_images_and_rgb(folder_path):
-    images_data = []
-    rgb_data = []
-
-    for filename in os.listdir(folder_path):
-        if filename.endswith(('.JPG', '.jpeg', '.PNG', 'jpg')):
-            file_path = os.path.join(folder_path, filename)
-            img = Image.open(file_path)
-
-            id_item = os.path.splitext(filename)[0]
-
-            images_data.append({'ID-Item': id_item, 'image': img})
-            rgb_values = list(img.getdata())
-            rgb_data.append({'ID-Item': id_item, 'RGB': rgb_values})
-
-    images_df = pd.DataFrame(images_data)
-    rgb_df = pd.DataFrame(rgb_data)
-
-    images_df.set_index('ID-Item', inplace=True)
-    rgb_df.set_index('ID-Item', inplace=True)
-
-    return images_df, rgb_df
-
-def open_image(images_df, id_item):
-    if id_item in images_df.index:
-        img = images_df.loc[id_item, 'image']
-        st.image(img, caption=f"ID-Item: {id_item}", use_column_width=True)
-    else:
-        st.warning(f"No se encontró la imagen para el ID-Item: {id_item}")
-
-# Llamar a la función para cargar imágenes y rasgos RGB
-images_df, rgb_df = load_images_and_rgb(folder_zoila)
-
-# Añadir un widget de búsqueda en Streamlit
-search_query = st.text_input("Buscar la imagen que deseas según el ID-Item:")
-
-# Verificar si se ha ingresado una consulta de búsqueda
-if search_query:
-    # Filtrar el DataFrame por ID-Item
-    filtered_images_df = images_df[images_df.index.str.contains(search_query, case=False, na=False)]
-
-    # Mostrar los resultados
-    if not filtered_images_df.empty:
-        # Mostrar imágenes correspondientes al resultado de la búsqueda
-        for index, row in filtered_images_df.iterrows():
-            open_image(images_df, index)
+st.subheader("🔎 Buscador de imágenes")
+imagen = st.text_input("Ingrese el ID-Item que desea buscar:")
+if imagen:
+    if imagen == 'ZAC-002-estampilla':
+        st.markdown("<a href='https://datos.pucp.edu.pe/file.xhtml?fileId=20676&version=1.0' target='_blank'>Haz clic aquí para visitar el blog</a>", unsafe_allow_html=True)
+    elif imagen == 'ZAC-005/006-recorte1':
+        st.markdown("<a href='https://datos.pucp.edu.pe/file.xhtml?fileId=20624&version=1.0' target='_blank'>Haz clic aquí para visitar el blog</a>", unsafe_allow_html=True)
     else:
         st.warning("No se encontraron resultados para la búsqueda.")
 
