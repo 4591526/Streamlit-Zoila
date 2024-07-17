@@ -81,7 +81,7 @@ if imagen:
         st.markdown("<a href='https://datos.pucp.edu.pe/file.xhtml?fileId=20624&version=1.0' target='_blank'>Haz clic aquí para ver la imagen</a>", unsafe_allow_html=True)
     elif imagen == 'ZAC-003-foto':
         st.markdown("<a href='https://datos.pucp.edu.pe/file.xhtml?fileId=20437&version=1.0' target='_blank'>Haz clic aquí para ver la imagen</a>", unsafe_allow_html=True)
-   elif imagen == 'ZAC-006-recorte2':
+    elif imagen == 'ZAC-006-recorte2':
         st.markdown("<a href='https://datos.pucp.edu.pe/file.xhtml?fileId=20701&version=1.0' target='_blank'>Haz clic aquí para ver la imagen</a>", unsafe_allow_html=True)     
     else:
         st.warning("No se encontraron resultados para la búsqueda.")
