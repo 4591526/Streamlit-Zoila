@@ -44,7 +44,7 @@ estilo_personalizado = f"""
 st.markdown(estilo_personalizado, unsafe_allow_html=True)
 
 # Mostramos la imagen de Zoila
-st.image(imagen_zoila, caption="Zoila Cáceres", use_column_width=True)
+st.image(imagen_zoila, caption="Zoila Cáceres", use_container_width=True)
 
 # Mostramos la imagen de las chicas superpoderosas
 # st.image(imagen_chicas, caption="Grupo Chicas Superpoderosas - HLAB", use_column_width=True)
@@ -87,4 +87,4 @@ if imagen:
         st.warning("No se encontraron resultados para la búsqueda.")
 
 # Mostramos la imagen del Team del proyecto de Zoila
-st.image(imagen_team_zoila, caption="Equipo del Proyecto de Zoila", use_column_width=True)
+st.image(imagen_team_zoila, caption="Equipo del Proyecto de Zoila", use_container_width=True)
